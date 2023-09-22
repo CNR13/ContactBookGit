@@ -13,6 +13,8 @@ public class Main {
     public static final String SET_PHONE      = "SP";
     public static final String SET_EMAIL      = "SE";
     public static final String LIST_CONTACTS  = "LC";
+    public static final String LOOK_PHONE     = "GN";
+    public static final String EQUAL_PHONE    = "EP";
     public static final String QUIT           = "Q";
 
     //Constantes que definem as mensagens para o utilizador
@@ -53,7 +55,7 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
-                case "GN":
+                case LOOK_PHONE:
                     lookupContact(in, cBook);
                     break;
                 default:
