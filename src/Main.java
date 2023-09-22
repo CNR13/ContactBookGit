@@ -58,6 +58,9 @@ public class Main {
                 case LOOK_PHONE:
                     lookupContact(in, cBook);
                     break;
+                case EQUAL_PHONE:
+                    checkEqualPhone(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -163,5 +166,13 @@ public class Main {
         else{
             System.out.println(c.getName());
         }
+    }
+
+    private static void checkEqualPhone(ContactBook cBook) {
+
+        if (!cBook.hasEqualPhoneNumbers())
+            System.out.println("All contacts have different phone numbers.");
+        else
+            System.out.println("There are contacts that share phone numbers.");
     }
 }
