@@ -113,6 +113,7 @@ public class ContactBook {
         else return contacts[pos];
     }
 
+
     public boolean hasEqualPhoneNumbers() {
         if (this.getNumberOfContacts() >= 2) {
             for (int i = 0; i < this.counter-1; i++) {
