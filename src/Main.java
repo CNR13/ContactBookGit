@@ -53,7 +53,7 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
-                case "GC":
+                case "GN":
                     lookupContact(in, cBook);
                     break;
                 default:
@@ -154,6 +154,12 @@ public class Main {
     private static void lookupContact(Scanner in, ContactBook cBook){
         int phone = in.nextInt();in.nextLine();
 
-
+        Contact c = cBook.lookupByPhone(phone);
+        if (c == null){
+            System.out.println("Phone number does not exist.");
+        }
+        else{
+            System.out.println(c.getName());
+        }
     }
 }
